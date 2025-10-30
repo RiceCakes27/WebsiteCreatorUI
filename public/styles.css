@@ -1,0 +1,66 @@
+#toolbox {
+    width: 20%;
+    float: left;
+    background-color: #f4f4f4;
+    padding: 10px;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+#toolbox div {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ddd;
+    cursor: grab;
+}
+#optionsPanel {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+}
+#canvas {
+    width: 80%;
+    float: left;
+    min-height: 100vh;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+#canvas .draggable {
+    border: 1px dashed #888 !important;
+    /*border-radius: 5px; cool but idk*/
+    padding: 5px;
+    margin: 5px 0;
+    position: relative;
+    cursor: pointer;
+}
+#canvas .delete-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+#canvas img {
+    max-width: 100%;
+    height: auto;
+}
+#audio, #video, #img, a {
+    padding: 5px 5px 2px 5px !important;
+    vertical-align:middle;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    width: fit-content;
+}

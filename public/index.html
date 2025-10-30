@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="toolbox">
+    <h3>Toolbox</h3>
+    <div draggable="true" data-type="h1">Heading (H1)</div>
+    <div draggable="true" data-type="p">Paragraph (P)</div>
+    <div draggable="true" data-type="img">Image (IMG)</div>
+    <div draggable="true" data-type="video">Video</div>
+    <div draggable="true" data-type="audio">Audio</div>
+    <div draggable="true" data-type="div">Divider (DIV)</div>
+    <div draggable="true" data-type="a">Link (A)</div>
+
+    <div id="optionsPanel">
+      <h4>Options</h4>
+      <div id="optionsContent"></div>
+    </div>
+  </div>
+  <div id="body2">
+    <div id="canvas" ondragover="allowDrop(event)" ondrop="drop(event)">
+      <h3>Canvas</h3>
+    </div>
+  </div>
+  <input type="text" required id="pathName" placeholder="Enter path (e.g., my-website)" />
+  <button id="publishButton">Publish</button>
+  <p id="status"></p>
+  <script src="script.js"></script>
+</body>
+</html>
