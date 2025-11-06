@@ -3,11 +3,13 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+require('dotenv').config({ quiet: true });
 
-const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const IP = ["localhost", process.env.IP]
 const IP_SELECT = 0
+
+const app = express();
 
 const rl = readline.createInterface({
   input: process.stdin,
