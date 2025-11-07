@@ -287,7 +287,7 @@ document.getElementById('publishButton').addEventListener('click', () => {
 const sanitizedHtml = clonedCanvas.innerHTML;
 const pathName = document.getElementById('pathName').value;
 
-fetch('/publish', {
+fetch('publish', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ pathname: pathName, html: sanitizedHtml }),

@@ -6,6 +6,7 @@ const readline = require('readline');
 require('dotenv').config({ quiet: true });
 
 const PORT = process.env.PORT || 3000;
+const ROOT = process.env.ROOT || '/websitecreator';
 const IP = ["localhost", process.env.IP]
 const IP_SELECT = 0
 
@@ -20,7 +21,7 @@ const rl = readline.createInterface({
 app.use(bodyParser.json({ limit: '50mb' })); // Adjust the limit as needed
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
-app.post('/publish', (req, res) => {
+app.post(ROOT+'/publish', (req, res) => {
   const { pathname, html } = req.body;
   const dir = path.join(__dirname, 'public', pathname);
 
@@ -41,7 +42,7 @@ app.post('/publish', (req, res) => {
   });
 });
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(ROOT, express.static('public'));
 
 app.listen(PORT, IP[IP_SELECT], () => {
   console.log(`Server running on http://${IP[IP_SELECT]}:${PORT}`);
